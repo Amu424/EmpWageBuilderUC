@@ -15,6 +15,7 @@ int totalWorkingDays=0;
 while(totalEmpHrs<=MAX_HRS_IN_MONTH && totalWorkingDays<=TOTAL_WORKING_DAYS){
 int empCheck=(int)(Math.floor((Math.random()*10)%3));
 //int ch=(int)empCheck;
+totalWorkingDays++;
 switch (empCheck){
  			case 1:
    	empHrs=8;
