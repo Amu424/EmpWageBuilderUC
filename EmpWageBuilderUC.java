@@ -5,17 +5,27 @@ int IS_PART_TIME=2;
 int WAGE_PER_HR=20;
 int DAY_HRS=16;
 int PART_TIME_HRS=8;
-double empCheck=Math.floor((Math.random()*10)%3);
-int ch=(int)empCheck;
-switch (ch){
+int TOTAL_WORKING_DAYS=20;
+int empHrs=0;
+int totalEmpWage=0;
+int empWage=0;
+for (int day=0;day<=TOTAL_WORKING_DAYS;day++){
+int empCheck=(int)(Math.floor((Math.random()*10)%3));
+//int ch=(int)empCheck;
+switch (empCheck){
  			case 1:
-   	System.out.println("Employee is full time wage is"+DAY_HRS*WAGE_PER_HR);
+   	empHrs=8;
 					break;
 			case 2:
- System.out.println("Employee is part time and wage is "+PART_TIME_HRS*WAGE_PER_HR);
+ 					empHrs=4;
 						break;
 default:
 System.out.println("Employee is absent");
 }
+empWage=empHrs*WAGE_PER_HR;
+totalEmpWage+=empWage;
+System.out.println("Employee wage = "+empWage);
+}
+System.out.println("Total employee wage ="+totalEmpWage);
 }
 }
