@@ -6,10 +6,13 @@ int WAGE_PER_HR=20;
 int DAY_HRS=16;
 int PART_TIME_HRS=8;
 int TOTAL_WORKING_DAYS=20;
+int MAX_HRS_IN_MONTH=100;
 int empHrs=0;
 int totalEmpWage=0;
 int empWage=0;
-for (int day=0;day<=TOTAL_WORKING_DAYS;day++){
+int totalEmpHrs=0;
+int totalWorkingDays=0;
+while(totalEmpHrs<=MAX_HRS_IN_MONTH && totalWorkingDays<=TOTAL_WORKING_DAYS){
 int empCheck=(int)(Math.floor((Math.random()*10)%3));
 //int ch=(int)empCheck;
 switch (empCheck){
